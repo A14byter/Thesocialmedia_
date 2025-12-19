@@ -53,7 +53,7 @@ class Follow(models.Model):
 
 class Page(models.Model):
     user_name = models.OneToOneField(to=settings.AUTH_USER_MODEL ,on_delete=models.CASCADE , related_name='user')
-    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
+    avatar = models.ImageField( blank=True, null=True)
     biography = models.CharField(max_length=100 , blank=True , null=True)
     is_private = models.BooleanField(default=False)
 

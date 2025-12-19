@@ -4,13 +4,15 @@ __pycache__/
 .venv/
 
 # Django
-db.sqlite3
-media/
-staticfiles/
+db.sqlite
+storage/
 
+local_settings.py/
+chats/static/
 # Environment
 .env
-
+.st
 # IDE
 .vscode/
 .idea/
+

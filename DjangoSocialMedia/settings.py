@@ -82,6 +82,7 @@ DATABASES = {
         'HOST': DB_HOST,
         'USER':DB_USER,
         'PASSWORD':DB_PASS,
+        'PORT': '3306',
     }
 }
 
@@ -134,18 +135,20 @@ REST_FRAMEWORK = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.EmailBackend',   # بک‌اند خودت برای ایمیل
-    'django.contrib.auth.backends.ModelBackend',  # پیش‌فرض
+    'accounts.backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),  # مثلا یک هفته
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=60),  # یک ماه
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=60),
 }
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels.layers.InMemoryChannelLayer",
     },
 }
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'storage'
