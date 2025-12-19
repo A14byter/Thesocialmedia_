@@ -7,7 +7,7 @@ __pycache__/
 db.sqlite
 storage/
 
-local_settings.py/
+DjangoSocialMedia/local_settings.py/
 chats/static/
 # Environment
 .env
